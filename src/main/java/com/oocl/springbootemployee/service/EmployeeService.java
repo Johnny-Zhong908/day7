@@ -20,6 +20,7 @@ public class EmployeeService {
     public Employee creat(Employee employee) {
         return employeeRepository.addEmployee(employee);
     }
+    public boolean creatStatus(Employee employee){return employeeRepository.getIsActive(employee);}
 
     public Employee update(Integer employeeId, Employee employee){
         Employee employeeExisted = employeeRepository.getEmployeeById(employeeId);

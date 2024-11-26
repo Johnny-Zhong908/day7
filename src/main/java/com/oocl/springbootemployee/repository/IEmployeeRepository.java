@@ -19,4 +19,5 @@ public interface IEmployeeRepository {
     void removeEmployee(Integer id);
 
     List<Employee> getAllByPageSize(Integer pageIndex, Integer pageSize);
+    boolean getIsActive(Employee employee);
 }

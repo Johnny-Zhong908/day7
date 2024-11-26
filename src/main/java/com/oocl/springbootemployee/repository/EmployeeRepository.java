@@ -52,7 +52,9 @@ public class EmployeeRepository implements IEmployeeRepository {
             employee.getName(),
             employee.getAge(),
             employee.getGender(),
-            employee.getSalary());
+            employee.getSalary(),
+                employee.getIsActive());
+
 
         employees.add(newEmployee);
         return newEmployee;
@@ -95,4 +97,11 @@ public class EmployeeRepository implements IEmployeeRepository {
             .limit(pageSize)
             .toList();
     }
+
+    @Override
+    public boolean getIsActive(Employee employee) {
+        return employee.isActive;
+    }
+
+
 }
